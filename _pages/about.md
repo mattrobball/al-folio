@@ -2,10 +2,8 @@
 layout: about
 title: about
 permalink: /
-description: 'Professor in the
-<a href="http://www.math.sc.edu/">Department of Mathematics</a> at <a
-href="https://sc.edu">USC</a>. <br>
-Member of the <a href="https://scagnt.org">SC AG NT group</a>. <br>
+description: 'Professor of Mathematics at <a href="https://sc.edu">USC</a>. <br>
+Associate Director for Scientific Activities at <a href="https://icarm.io">ICARM</a>. <br>
 Maintainer of <a href="https://github.com/leanprover-community/mathlib4">Mathlib</a>. <br>
 Fellow of the <a href="https://www.ams.org">American Mathematical Society</a>.<br><br>'
 
@@ -20,14 +18,19 @@ funding: true # include images of funding sources
 social: true  # includes social icons at the bottom of the page
 ---
 
-I study categorical structures and am particularly interested in questions arising
-from mirror symmetry. Much of my current work focuses on derived categories and
-their relation to more classical questions in geometry and arithmetic. I am also
-interested in formal verification, particularly of modern mathematics.
+I study categorical structures, particular those arising
+from mirror symmetry. I am also interested in formal verification, especially
+of modern mathematics.
 
 For more information about me, see my <a href="{{ '/assets/pdf/ballard_cv.pdf'
 | prepend: site.baseurl | prepend: site.url }}">CV</a>. For a list of my
 papers, please view the <a href="./publications/">publications</a> page.
+
+Since July 2025, I have been the Associate Director for Scientific
+Activities at the new NSF MSRI [Institute for Computer-Aided
+Reasoning in Mathematics (ICARM)](https://icarm.io), where
+I help to advance mathematics and the mathematical community
+through the use of all faces of artificial intelligence.
 
 I am a member of the maintainer group for [Mathlib](https://leanprover-community.
 github.io), the expansive library of mathematics formalized in the
@@ -37,6 +40,4 @@ in the age of AI.
 
 For a little of my pedagogical philosophy and experience, see my <a
 href="./teaching">teaching</a> page. As an extension of teaching, I take pride
-in mentoring researchers at all stages and I regularly organize mathematical
-events, even virtual ones. If you are interested in participating
-in such an event, please contact me.
+in mentoring researchers at all stages.
