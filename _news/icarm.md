@@ -6,7 +6,7 @@ inline: false
 ---
 
 Matthew Ballard is the founding Associate Director for Scientific Activities at
-the Institute for Computer-Aided Reasoning in Mathematics, [ICARM](https://icarm.io,
+the Institute for Computer-Aided Reasoning in Mathematics, ICARM,
 a new NSF- and Simons Foundation-funded national mathematics institute
 designed to accelerate mathematical research and empower mathematicians through
 all faces of AI, including formal methods, automated reasoning, and machine learning.

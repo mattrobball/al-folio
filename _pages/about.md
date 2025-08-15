@@ -3,7 +3,8 @@ layout: about
 title: about
 permalink: /
 description: 'Professor of Mathematics at <a href="https://sc.edu">USC</a>. <br>
-Associate Director for Scientific Activities at <a href="https://icarm.io">ICARM</a>. <br>
+Associate Director for Scientific Activities at ICARM. <br>
+# Associate Director for Scientific Activities at <a href="https://icarm.io">ICARM</a>. <br>
 Maintainer of <a href="https://github.com/leanprover-community/mathlib4">Mathlib</a>. <br>
 Fellow of the <a href="https://www.ams.org">American Mathematical Society</a>.<br><br>'
 
@@ -27,8 +28,8 @@ For more information about me, see my <a href="{{ '/assets/pdf/ballard_cv.pdf'
 papers, please view the <a href="./publications/">publications</a> page.
 
 Since July 2025, I have been the Associate Director for Scientific
-Activities at the new NSF MSRI [Institute for Computer-Aided
-Reasoning in Mathematics](https://icarm.io), where
+Activities at the new NSF MSRI Institute for Computer-Aided
+Reasoning in Mathematics, where
 I help to advance mathematics and the mathematical community
 through the use of all faces of artificial intelligence.
 
