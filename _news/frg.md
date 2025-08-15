@@ -1,6 +1,6 @@
 ---
 layout: post
-title: FRG on multigraded commutative algebra, toric varities, and mirror symmetry
+title: FRG on multigraded commutative algebra, toric varieties, and mirror symmetry
 date: 2025-07-23 00:00:00-0400
 inline: false
 ---
