@@ -4,7 +4,6 @@ title: about
 permalink: /
 description: 'Professor of Mathematics at <a href="https://sc.edu">USC</a>. <br>
 Associate Director for Scientific Activities at ICARM. <br>
-# Associate Director for Scientific Activities at <a href="https://icarm.io">ICARM</a>. <br>
 Maintainer of <a href="https://github.com/leanprover-community/mathlib4">Mathlib</a>. <br>
 Fellow of the <a href="https://www.ams.org">American Mathematical Society</a>.<br><br>'
 
