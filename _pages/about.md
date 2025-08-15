@@ -28,7 +28,7 @@ papers, please view the <a href="./publications/">publications</a> page.
 
 Since July 2025, I have been the Associate Director for Scientific
 Activities at the new NSF MSRI [Institute for Computer-Aided
-Reasoning in Mathematics (ICARM)](https://icarm.io), where
+Reasoning in Mathematics](https://icarm.io), where
 I help to advance mathematics and the mathematical community
 through the use of all faces of artificial intelligence.
 
