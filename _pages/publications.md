@@ -3,7 +3,8 @@ layout: page
 permalink: /publications/
 title: publications
 description: Published articles and preprints.
-years: [2024,
+years: [2025,
+2024,
 2023,
 2022,
 2021,
