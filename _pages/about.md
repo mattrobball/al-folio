@@ -18,8 +18,8 @@ funding: true # include images of funding sources
 social: true  # includes social icons at the bottom of the page
 ---
 
-I study categorical structures, particular those arising
-from mirror symmetry. I am also interested in formal verification, especially
+I am interested categorical structures, particular those arising
+from mirror symmetry, and in formal verification, especially
 of modern mathematics.
 
 For more information about me, see my <a href="{{ '/assets/pdf/ballard_cv.pdf'
