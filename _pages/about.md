@@ -18,7 +18,7 @@ funding: true # include images of funding sources
 social: true  # includes social icons at the bottom of the page
 ---
 
-I am interested categorical structures, particular those arising
+I am interested categorical structures, particularly those arising
 from mirror symmetry, and in formal verification, especially
 of modern mathematics.
 

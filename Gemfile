@@ -11,6 +11,7 @@ group :jekyll_plugins do
     gem 'jekyll-sitemap'
     gem 'jemoji'
     gem 'observer'
+    gem 'ostruct'
     gem 'unicode_utils'
     gem 'webrick'
 end
