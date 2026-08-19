@@ -2,9 +2,9 @@
 # Rendered by the jekyll-socials plugin, in the order defined here.
 # https://github.com/george-gca/jekyll-socials
 #
-# Ordered in two functional groups: personal first, then scholarly. The gap
-# between them is styled in _layouts/about.liquid, which offsets the first
-# icon of the scholarly group -- keep these groups in this order, and update
+# Ordered in two functional groups: personal first, then scholarly. Each group
+# gets its own row, via a rule in _layouts/about.liquid that breaks the line
+# before the first scholarly icon -- keep these groups in this order, and update
 # that rule if you add or remove an icon before arxiv_id.
 
 # --- Personal ---

@@ -80,8 +80,11 @@ layout: default
         of personal icons changes.
       {% endcomment %}
       <style>
-        .social .contact-icons a:nth-child(6) {
-          margin-left: 2.5rem;
+        /* Break the run so each group gets its own row. The icons are inline,
+           so a newline in a pseudo-element is what forces the wrap. */
+        .social .contact-icons a:nth-child(6)::before {
+          content: "\A";
+          white-space: pre;
         }
       </style>
       <div class="social">
