@@ -1,15 +1,22 @@
 # Social links and IDs for the site owner.
 # Rendered by the jekyll-socials plugin, in the order defined here.
 # https://github.com/george-gca/jekyll-socials
+#
+# Ordered in two functional groups: personal first, then scholarly. The gap
+# between them is styled in _layouts/about.liquid, which offsets the first
+# icon of the scholarly group -- keep these groups in this order, and update
+# that rule if you add or remove an icon before arxiv_id.
+
+# --- Personal ---
 email: mrb@mattrobball.com
-arxiv_id: ballard_m_1 # https://arxiv.org/a/ballard_m_1.html
-orcid_id: 0000-0001-5819-0159
-scholar_userid: 4ZhyZRgAAAAJ # Google Scholar
-github_username: mattrobball
-linkedin_username: mattrobball
 work_url: https://sc.edu/study/colleges_schools/artsandsciences/mathematics/our_people/directory/ballard_matthew.php
 cv_pdf: /assets/pdf/ballard_cv.pdf
+github_username: mattrobball
+linkedin_username: mattrobball
 
+# --- Scholarly ---
+arxiv_id: ballard_m_1 # https://arxiv.org/a/ballard_m_1.html
+scholar_userid: 4ZhyZRgAAAAJ # Google Scholar
 # Not built into jekyll-socials, so defined as custom entries.
 mathscinet:
   logo: /assets/img/mathscinet.png
@@ -19,6 +26,7 @@ zbmath:
   logo: /assets/img/zb_math.png
   title: zbMATH
   url: https://www.zbmath.org/authors/ballard.matthew-robert
+orcid_id: 0000-0001-5819-0159
 math_genealogy:
   logo: fa-brands fa-sourcetree
   title: Mathematics Genealogy

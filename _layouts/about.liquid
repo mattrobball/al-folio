@@ -72,6 +72,18 @@ layout: default
 
     <!-- Social -->
     {% if page.social %}
+      {% comment %}
+        Local addition: the socials in _data/socials.yml are ordered in two
+        functional groups, personal then scholarly. jekyll-socials emits one
+        flat run of <a> elements, so the split is shown by offsetting the first
+        icon of the scholarly group. Update the nth-child index if the number
+        of personal icons changes.
+      {% endcomment %}
+      <style>
+        .social .contact-icons a:nth-child(6) {
+          margin-left: 2.5rem;
+        }
+      </style>
       <div class="social">
         <div class="contact-icons">{% social_links %}</div>
 
