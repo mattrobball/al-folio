@@ -13,11 +13,11 @@ rss_icon: true # comment out to hide the RSS icon
 
 # Not built into jekyll-socials, so defined as custom entries.
 mathscinet:
-  logo: /assets/img/mathscinet.svg
+  logo: /assets/img/mathscinet.png
   title: MathSciNet
   url: https://mathscinet.ams.org/mathscinet/search/author.html?mrauthid=861551
 zbmath:
-  logo: /assets/img/zb_math.svg
+  logo: /assets/img/zb_math.png
   title: zbMATH
   url: https://www.zbmath.org/authors/ballard.matthew-robert
 math_genealogy:
