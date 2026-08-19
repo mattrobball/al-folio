@@ -80,11 +80,64 @@ layout: default
         of personal icons changes.
       {% endcomment %}
       <style>
-        /* Break the run so each group gets its own row. The icons are inline,
-           so a newline in a pseudo-element is what forces the wrap. */
+        /* Icon glyphs differ in width (48-80px), so equal margins still read as
+           uneven spacing. Give each icon the same box. The <a> must stay inline
+           for the group break below to work, so the box goes on the icon. */
+        .social .contact-icons a > i,
+        .social .contact-icons a > svg {
+          display: inline-block;
+          width: 5rem;
+          text-align: center;
+        }
+
+        .social .contact-icons a > img {
+          width: 3.2rem;
+          padding-inline: 0.9rem;
+          box-sizing: content-box;
+        }
+
+        /* Break the run so each group gets its own row. The anchors are inline,
+           so a newline in a pseudo-element is what forces the wrap. Keep this
+           index in sync with the number of personal icons in _data/socials.yml. */
         .social .contact-icons a:nth-child(6)::before {
           content: "\A";
           white-space: pre;
+        }
+
+        /* At 4rem the scholarly row of six needs ~560px, so on narrow screens it
+           wraps and the grouping falls apart (3+2+3+3 at a 350px container).
+           Scale the icons down so both rows survive; the sizes below hold 5+6
+           down to a 280px container. */
+        @media (max-width: 767px) {
+          .social .contact-icons {
+            font-size: 2.5rem;
+          }
+
+          .social .contact-icons a > i,
+          .social .contact-icons a > svg {
+            width: 3rem;
+          }
+
+          .social .contact-icons a > img {
+            width: 2rem;
+            padding-inline: 0.5rem;
+          }
+        }
+
+        @media (max-width: 576px) {
+          .social .contact-icons {
+            font-size: 1.9rem;
+          }
+
+          .social .contact-icons a > i,
+          .social .contact-icons a > svg {
+            width: 2.3rem;
+          }
+
+          .social .contact-icons a > img {
+            width: 1.5rem;
+            padding-inline: 0.4rem;
+          }
         }
       </style>
       <div class="social">
