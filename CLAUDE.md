@@ -1,60 +1,79 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+Guidance for Claude Code (claude.ai/code) when working in this repository.
 
 ## Project Overview
 
-This is an **al-folio** Jekyll-based academic website for matthewrobertballard.com. It generates a static site with publications, teaching, projects, news, and blog sections.
+The **al-folio** Jekyll site for matthewrobertballard.com.
 
-## Build & Development Commands
+As of the v1.2 upgrade, al-folio is a **gem-based theme**. The theme's layouts,
+includes, and styles are no longer vendored in this repo — they live in the
+`al_folio_core` gem and its `al_*` companions (see `Gemfile`). This repo holds
+site-owned content and configuration only.
+
+## Build & Development
+
+Requires a modern Ruby (installed via `brew install ruby`); the macOS system
+Ruby is too old.
 
 ```bash
-bundle install                    # Install Ruby dependencies
-bundle exec jekyll serve          # Local dev server at http://localhost:4000
-bundle exec jekyll build          # Build site (outputs to ../website per _config.yml)
-./bin/deploy                      # Deploy to GitHub Pages (gh-pages branch)
+export PATH="/opt/homebrew/opt/ruby/bin:/opt/homebrew/lib/ruby/gems/4.0.0/bin:$PATH"
+bundle install
+bundle exec jekyll serve     # local dev server
+bundle exec jekyll build     # builds to ./_site
 ```
 
-Note: The `destination` in `_config.yml` is set to `../website`, so builds output one directory up.
+Optional: `jupyter-nbconvert` on PATH is only needed for Jupyter notebook posts.
 
-## Architecture
+## Where things live
 
-**Jekyll static site generator** with these key layers:
+- **`_config.yml`** — all site settings. `theme: al_folio_core` wires in the theme.
+- **`_data/socials.yml`** — social links, rendered by `jekyll-socials`. MathSciNet,
+  zbMATH, and Math Genealogy are `custom_social` entries; the rest are built in.
+- **`_data/coauthors.yml`** — coauthor linking for the bibliography.
+- **`_bibliography/papers.bib`** — drives `/publications/` via jekyll-scholar.
+  Years are grouped automatically (`group_by: year`); do **not** reintroduce a
+  hardcoded `years:` list in `_pages/publications.md` — that silently drops papers
+  from years missing off the list.
+- **`_pages/`** — about, publications, teaching (plus 404, blog, news).
+- **`_news/`** — news items, shown on the homepage and `/news/`.
+- **`_projects/`** — project entries, currently `output: false` (unpublished).
+  Flip the collection to `output: true` in `_config.yml` and move
+  `_drafts/projects.md` into `_pages/` to publish them.
+- **`assets/`** — images, CV PDF.
 
-- **`_config.yml`** — Central configuration: site metadata, plugin settings, feature flags, library versions, Jekyll Scholar bibliography config. Most site-wide changes start here.
-- **`_layouts/`** — Page templates. `default.html` is the base; `about.html` is the homepage; `bib.html` handles bibliography detail pages.
-- **`_includes/`** — Reusable HTML partials (header, footer, social links, scripts). `_includes/scripts/` contains JS integration (MathJax, jQuery, etc.).
-- **`_pages/`** — Static content pages (about.md, publications.md, teaching.md, etc.).
-- **`_bibliography/papers.bib`** — BibTeX file processed by `jekyll-scholar` plugin. This drives the publications page. Coauthor linking is configured via `_data/coauthors.yml`.
-- **`_sass/`** — SCSS stylesheets. `_variables.scss` for theme colors, `_themes.scss` for dark/light mode, `_base.scss` and `_layout.scss` for core styles.
-- **`_news/`** — Announcement items (output: true, generates individual pages).
-- **`_projects/`** — Project entries (output: false, displayed inline only).
-- **`_posts/`** — Blog posts in standard Jekyll format.
-- **`assets/`** — Static files: images, PDFs, CSS, JS.
+## Local theme overrides
 
-## Key Plugins
+Local files shadow theme files of the same path. Overrides are tracked in
+`.al-folio-overrides.yml` so gem upgrades can flag drift.
 
-- **jekyll-scholar** — Bibliography/citation processing from BibTeX (APA style)
-- **jekyll-paginate-v2** — Blog pagination
-- **jekyll-feed** / **jekyll-sitemap** — RSS and sitemap generation
-- **jemoji** — GitHub emoji support
-- **jekyll-email-protect** — Email address obfuscation
+Current overrides:
+- `_layouts/about.liquid` — copy of the theme layout with a **funding** section
+  added between news and selected publications. Driven by `funding: true` in
+  `_pages/about.md` front matter and `_includes/funding.liquid`.
 
-## Content Editing Patterns
+After upgrading gems, re-check overrides:
 
-- **Publications**: Edit `_bibliography/papers.bib` (BibTeX format). Link coauthors via `_data/coauthors.yml`.
-- **Pages**: Edit markdown files in `_pages/`. Front matter controls layout, title, permalink.
-- **News**: Add dated markdown files to `_news/` (format: `_news/announcement_N.md`).
-- **Site metadata/social links**: Update `_config.yml` (social section, scholar section, etc.).
-- **CV**: Replace `assets/pdf/ballard_cv.pdf`.
+```bash
+bundle exec al-folio upgrade audit --no-fail
+bundle exec al-folio upgrade overrides audit
+bundle exec al-folio upgrade overrides diff _layouts/about.liquid
+bundle exec al-folio upgrade overrides accept _layouts/about.liquid
+```
 
-## Deployment
+## Third-party scripts
 
-- Source branch: `master`
-- Deploy branch: `gh-pages`
-- GitHub Actions workflow (`.github/workflows/deploy.yml`) builds and deploys on push to master
-- Uses Ruby 2.7 in CI
+Do not add third-party script tags to page templates. The pre-v1 site carried
+`polyfill.io`, `extreme-ip-lookup.com` (JSONP, with a committed API key), and a
+`gitcdn.link` stylesheet; all were removed. polyfill.io in particular was sold and
+used to serve malware. Prefer the theme's own plugins over hand-rolled snippets.
 
-## Enabled Features
+## Content editing
 
-MathJax (LaTeX math), Google Analytics, dark mode, Masonry layout, medium-style image zoom. Bootstrap 4.5.2 base styling.
+- **Publications**: edit `_bibliography/papers.bib`.
+- **News**: add a dated markdown file to `_news/`.
+- **CV**: replace `assets/pdf/ballard_cv.pdf`.
+- **Pages**: edit markdown in `_pages/`; front matter controls layout, title,
+  permalink, and `nav`/`nav_order`.
+
+`TODO.md` tracks outstanding content corrections.

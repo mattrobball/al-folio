@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-description: 'Professor of Mathematics at <a href="https://sc.edu">USC</a>. <br>
+subtitle: 'Professor of Mathematics at <a href="https://sc.edu">USC</a>. <br>
 Associate Director for Scientific Activities at ICARM. <br>
 Maintainer of <a href="https://github.com/leanprover-community/mathlib4">Mathlib</a>. <br>
 Fellow of the <a href="https://www.ams.org">American Mathematical Society</a>.<br><br>'
@@ -10,12 +10,20 @@ Fellow of the <a href="https://www.ams.org">American Mathematical Society</a>.<b
 profile:
   align: right
   image: prof_pic.jpg
-  address: >
+  image_circular: false # crops the image to make it circular
+  more_info:
 
-news: true # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
-funding: true # include images of funding sources
-social: true  # includes social icons at the bottom of the page
+funding: true # includes the funding section (local _layouts/about.liquid override)
+social: true # includes social icons at the bottom of the page
+
+announcements:
+  enabled: true # includes a list of news items
+  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
+  limit: 5 # leave blank to include all the news in the `_news` folder
+
+latest_posts:
+  enabled: false
 ---
 
 I am interested categorical structures, particularly those arising

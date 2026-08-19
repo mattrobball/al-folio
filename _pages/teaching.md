@@ -4,6 +4,7 @@ permalink: /teaching/
 title: teaching
 description: A bit of my teaching philosophy and experience.
 nav: true
+nav_order: 3
 ---
 
 ### philosophy
