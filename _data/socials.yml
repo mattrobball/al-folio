@@ -9,7 +9,6 @@ github_username: mattrobball
 linkedin_username: mattrobball
 work_url: https://sc.edu/study/colleges_schools/artsandsciences/mathematics/our_people/directory/ballard_matthew.php
 cv_pdf: /assets/pdf/ballard_cv.pdf
-rss_icon: true # comment out to hide the RSS icon
 
 # Not built into jekyll-socials, so defined as custom entries.
 mathscinet:

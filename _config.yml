@@ -89,6 +89,14 @@ al_folio:
 # will use title and url fields
 # Take a look to https://github.com/jekyll/jekyll-feed for more customization
 
+# The blog has no posts, so the default /feed.xml is empty. News is this site's
+# living content, so publish a feed for that collection instead; the RSS icon in
+# _data/socials.yml points at it.
+feed:
+  collections:
+    news:
+      path: "/news/feed.xml"
+
 # -----------------------------------------------------------------------------
 # Layout
 # -----------------------------------------------------------------------------
