@@ -225,6 +225,7 @@ kramdown:
 # Includes & excludes
 include: ["_pages"]
 exclude:
+  - .al-folio-overrides.yml
   - AGENTS.md
   - al-folio-upgrade-report.md
   - bin/
@@ -243,6 +244,8 @@ exclude:
   - purgecss.config.js
   - README.md
   - readme_preview/
+  - requirements.txt
+  - TODO.md
   - gems/
   - migrations/
   - vendor
