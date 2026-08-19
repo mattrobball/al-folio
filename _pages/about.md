@@ -40,8 +40,7 @@ Reasoning in Mathematics, where
 I help to advance mathematics and the mathematical community
 through the use of all faces of artificial intelligence.
 
-I am a member of the maintainer group for [Mathlib](https://leanprover-community.
-github.io), the expansive library of mathematics formalized in the
+I am a member of the maintainer group for [Mathlib](https://leanprover-community.github.io), the expansive library of mathematics formalized in the
 [Lean](https://lean-lang.org) programming language. I always welcome a
 chat about how formalization, particularly Lean, can make your life better
 in the age of AI.
