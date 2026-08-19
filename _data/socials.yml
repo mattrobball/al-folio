@@ -1,14 +1,26 @@
-# this file contains the social media links and usernames of the author
-# the socials will be displayed in the order they are defined here
-# for more information, please refer to the documentation of jekyll-socials plugin: https://github.com/george-gca/jekyll-socials
-cv_pdf: /assets/pdf/example_pdf.pdf # path to your CV PDF file
-email: you@example.com # your email address
-inspirehep_id: 1010907 # Inspire HEP author ID
-rss_icon: true # comment this line to hide the RSS icon
-scholar_userid: qc6CJjYAAAAJ # your Google Scholar ID
-# wechat_qr: # filename of your wechat qr-code saved as an image (e.g., wechat-qr.png if saved to assets/img/wechat-qr.png)
-# whatsapp_number: # your WhatsApp number (full phone number in international format. Omit any zeroes, brackets, or dashes when adding the phone number in international format.)
-custom_social: # can be any name here other than the ones already defined in the jekyll-socials plugin
-  logo: https://www.alberteinstein.com/wp-content/uploads/2024/03/cropped-favicon-192x192.png # can be png, svg, jpg
-  title: Custom Social
-  url: https://www.alberteinstein.com/
+# Social links and IDs for the site owner.
+# Rendered by the jekyll-socials plugin, in the order defined here.
+# https://github.com/george-gca/jekyll-socials
+email: mrb@mattrobball.com
+arxiv_id: ballard_m_1 # https://arxiv.org/a/ballard_m_1.html
+orcid_id: 0000-0001-5819-0159
+scholar_userid: 4ZhyZRgAAAAJ # Google Scholar
+github_username: mattrobball
+linkedin_username: mattrobball
+work_url: https://sc.edu/study/colleges_schools/artsandsciences/mathematics/our_people/directory/ballard_matthew.php
+cv_pdf: /assets/pdf/ballard_cv.pdf
+rss_icon: true # comment out to hide the RSS icon
+
+# Not built into jekyll-socials, so defined as custom entries.
+mathscinet:
+  logo: /assets/img/mathscinet.svg
+  title: MathSciNet
+  url: https://mathscinet.ams.org/mathscinet/search/author.html?mrauthid=861551
+zbmath:
+  logo: /assets/img/zb_math.svg
+  title: zbMATH
+  url: https://www.zbmath.org/authors/ballard.matthew-robert
+math_genealogy:
+  logo: fa-brands fa-sourcetree
+  title: Mathematics Genealogy
+  url: https://www.mathgenealogy.org/id.php?id=132733

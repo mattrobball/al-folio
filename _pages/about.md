@@ -2,18 +2,19 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: 'Professor of Mathematics at <a href="https://sc.edu">USC</a>. <br>
+Associate Director for Scientific Activities at ICARM. <br>
+Maintainer of <a href="https://github.com/leanprover-community/mathlib4">Mathlib</a>. <br>
+Fellow of the <a href="https://www.ams.org">American Mathematical Society</a>.<br><br>'
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
-  more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+  more_info:
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
+funding: true # includes the funding section (local _layouts/about.liquid override)
 social: true # includes social icons at the bottom of the page
 
 announcements:
@@ -22,13 +23,29 @@ announcements:
   limit: 5 # leave blank to include all the news in the `_news` folder
 
 latest_posts:
-  enabled: true
-  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
-  limit: 3 # leave blank to include all the blog posts
+  enabled: false
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](https://www.reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+I am interested categorical structures, particularly those arising
+from mirror symmetry, and in formal verification, especially
+of modern mathematics.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+For more information about me, see my <a href="{{ '/assets/pdf/ballard_cv.pdf'
+| prepend: site.baseurl | prepend: site.url }}">CV</a>. For a list of my
+papers, please view the <a href="./publications/">publications</a> page.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+Since July 2025, I have been the Associate Director for Scientific
+Activities at the new NSF MSRI Institute for Computer-Aided
+Reasoning in Mathematics, where
+I help to advance mathematics and the mathematical community
+through the use of all faces of artificial intelligence.
+
+I am a member of the maintainer group for [Mathlib](https://leanprover-community.
+github.io), the expansive library of mathematics formalized in the
+[Lean](https://lean-lang.org) programming language. I always welcome a
+chat about how formalization, particularly Lean, can make your life better
+in the age of AI.
+
+For a little of my pedagogical philosophy and experience, see my <a
+href="./teaching">teaching</a> page. As an extension of teaching, I take pride
+in mentoring researchers at all stages.
