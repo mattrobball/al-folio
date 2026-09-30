@@ -252,6 +252,10 @@ exclude:
 keep_files:
   - CNAME
   - .nojekyll
+  - README.md
+
+# Build the site straight into the separate website repo.
+destination: /Users/worker/website
 
 # Use al_folio_core as the theme runtime; local files can still override theme files.
 theme: al_folio_core
